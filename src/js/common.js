@@ -223,28 +223,74 @@ $close.on('click', function() {
   });
 
   const date = new Date(),
-    datePlusOneDay = moment(date)
-      .add(1, 'days')
-      .toDate(),
     currentMonth = moment(date).format('MMM'),
     currentDay = moment(date).format('DD');
 
-  function datepicker(selector, picker2 = null) {
-    const $datepicker = $(selector),
-      $month = $datepicker.find('.js-month'),
-      $day = $datepicker.find('.js-day');
+  let checkinDate = date,
+    checkoutDate = moment(date)
+      .add(1, 'days')
+      .toDate();
+
+  checkinPicker();
+  checkoutPicker();
+
+  function checkoutPicker() {
+    const $datepicker = $('.js-checkout'),
+      $month = $datepicker.find('.js-checkout-month'),
+      $day = $datepicker.find('.js-checkout-day');
+
+    $month.html(moment(checkoutDate).format('MMM'));
+    $day.html(moment(checkoutDate).format('DD'));
+
+    const picker = datepicker($datepicker[0], {
+      id: 1,
+      onSelect: function(instance, date) {
+        $month.html(moment(date).format('MMM'));
+        $day.html(moment(date).format('DD'));
+        checkoutDate = instance.dateSelected;
+        // checkoutDate = moment(checkinDate).add(1, 'days');
+        // $outMonth.html(moment(checkoutDate).format('MMM'));
+        // $outDay.html(moment(checkoutDate).format('DD'));
+        // instance.sibling.setDate(checkoutDate.toDate());
+
+        // checkinDate = instance.dateSelected;
+        // console.log(checkinDate);
+        // $this.data('date', moment(date).format('YYYY-MM-DD'));
+        console.log('checkout ' + checkoutDate);
+        console.log('checkin: ' + checkinDate);
+      }
+    });
+
+    $month.on('click', function(e) {
+      e.stopPropagation();
+      picker.show();
+    });
+  }
+
+  function checkinPicker() {
+    const $datepicker = $('.js-checkin'),
+      $month = $datepicker.find('.js-checkin-month'),
+      $day = $datepicker.find('.js-checkin-day'),
+      $outMonth = $('.js-checkout-month'),
+      $outDay = $('.js-checkout-day');
 
     $month.html(moment(date).format('MMM'));
     $day.html(moment(date).format('DD'));
 
     const picker = datepicker($datepicker[0], {
+      id: 1,
       minDate: date,
       onSelect: function(instance, date) {
-        if (picker2) {
-          picker;
-        }
         $month.html(moment(date).format('MMM'));
         $day.html(moment(date).format('DD'));
+        checkinDate = instance.dateSelected;
+        checkoutDate = moment(checkinDate)
+          .add(1, 'days')
+          .toDate();
+        $outMonth.html(moment(checkoutDate).format('MMM'));
+        $outDay.html(moment(checkoutDate).format('DD'));
+        console.log('checkout ' + checkoutDate);
+        console.log('checkin: ' + checkinDate);
 
         // $this.data('date', moment(date).format('YYYY-MM-DD'));
       }
@@ -255,6 +301,26 @@ $close.on('click', function() {
       picker.show();
     });
   }
+
+  // function initDatepicker(selector, picker) {
+  //   const $datepicker = $(selector),
+  //     $month = $datepicker.find('.js-month'),
+  //     $day = $datepicker.find('.js-day');
+
+  //   $month.html(moment(date).format('MMM'));
+  //   $day.html(moment(date).format('DD'));
+
+  //   datepicker($datepicker[0], {
+  //     minDate: date,
+  //     onSelect: function(instance, date) {
+  //       $month.html(moment(date).format('MMM'));
+  //       $day.html(moment(date).format('DD'));
+  //       // $this.data('date', moment(date).format('YYYY-MM-DD'));
+  //     }
+  //   });
+
+  //   function setDate(datepicker, date) {}
+  // }
 
   // const picker = datepicker( $checkinDatepicker[0], {
   //   minDate: date,
