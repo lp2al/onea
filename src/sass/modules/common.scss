@@ -1,0 +1,340 @@
+.slider-ig {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &__item {
+    @include fluid-type(width height, 360px, 1440px, 260px, 350px);
+    margin: 0 15px;
+    background-size: cover;
+    transform: scale(0.6);
+    transition: all 0.2s ease-in-out 0s;
+    transform: scale(1);
+
+    &[aria-hidden='true'] {
+      opacity: 0.5;
+      transform: scale(0.9);
+      @include breakpoint($sm) {
+        transform: scale(0.8);
+      }
+    }
+
+    &.is-active {
+      transform: scale(1) !important;
+      opacity: 1 !important;
+    }
+  }
+
+  .slick-arrow {
+    background-color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 0;
+    padding-right: 20px;
+    &:before {
+      position: relative;
+    }
+    &.slick-prev {
+      left: 17px;
+      @include breakpoint($sm) {
+        left: 190px;
+      }
+      @include breakpoint($md) {
+        left: 100px;
+      }
+    }
+    &.slick-next {
+      right: 17px;
+      @include breakpoint($sm) {
+        right: 190px;
+      }
+      @include breakpoint($md) {
+        right: 100px;
+      }
+    }
+  }
+}
+
+.slick-arrow {
+  color: $pizza;
+  position: absolute;
+  font-size: 24px;
+  z-index: 1;
+}
+
+.slider-map {
+  max-width: 1140px;
+  margin: 0 auto;
+  &__item {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+
+    @include breakpoint($md) {
+      height: 800px;
+    }
+  }
+
+  &__textbox {
+    width: 100%;
+    @include fluid-type(padding-left padding-right, 375px, 1440px, 30px, 40px);
+    @include fluid-type(padding-top padding-bottom, 375px, 1440px, 40px, 50px);
+    background-color: #fff;
+    z-index: 2;
+    text-align: center;
+
+    @include breakpoint($md) {
+      position: absolute;
+      width: 550px;
+      height: 420px;
+      @include fluid-type(top, 768px, 1440px, 60px, 90px);
+      @include fluid-type(left, 768px, 1440px, 60px, 130px);
+      box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
+  }
+
+  &__count {
+    color: $pizza;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    @include breakpoint($md) {
+      display: block;
+    }
+  }
+
+  &__title {
+    @include fluid-type(font-size, 375px, 1440px, 24px, 32px);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    @include breakpoint($md) {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__copy {
+    margin-bottom: 20px;
+    line-height: 1.7;
+    color: #999;
+  }
+
+  &__cta {
+    display: block;
+    text-decoration: underline;
+    color: $neptune;
+    margin-bottom: 20px;
+  }
+
+  &__arrows {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    padding: 0 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include breakpoint($md) {
+      position: static;
+      display: block;
+      padding: 0;
+    }
+
+    & > button {
+      padding: 0;
+      color: $pizza;
+      font-size: 22px;
+
+      @include breakpoint($md) {
+        position: relative;
+        left: -4px;
+      }
+    }
+  }
+}
+
+.slider-suite {
+  position: relative;
+  max-width: 1140px;
+  margin: 0 auto;
+  &__item {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 35px;
+    @include breakpoint($md) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .slick-arrow {
+    position: absolute;
+    top: 40%;
+  }
+
+  .slick-next {
+    right: -40px;
+  }
+
+  .slick-prev {
+    left: -50px;
+  }
+}
+
+.suite {
+  max-width: 555px;
+
+  @include breakpoint($md) {
+    &:first-child {
+      margin-right: 15px;
+    }
+    &:last-child {
+      margin-left: 15px;
+    }
+  }
+
+  &__thumb {
+    display: block;
+  }
+
+  &__body {
+    background-color: #fff;
+    padding: 25px 40px;
+    @include fluid-type(padding-left padding-right, 375px, 1400, 0px, 40px);
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+    @include fluid-type(font-size, 375px, 1440px, 24px, 32px);
+  }
+
+  &__copy {
+    max-width: 400px;
+    font-size: 14px;
+    color: #999;
+    line-height: 1.7;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+
+  &__cta {
+    display: block;
+    text-decoration: underline;
+    color: $neptune;
+    margin-bottom: 20px;
+    font-size: 13px;
+    letter-spacing: 5px;
+  }
+}
+
+.slider-offer {
+  max-width: 1140px;
+  margin: 0 auto;
+
+  &__item {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex !important;
+    flex-direction: column;
+
+    @include breakpoint($md) {
+      flex-direction: row;
+    }
+  }
+
+  &__thumb {
+    width: 100%;
+    @include fluid-type(height, 375px, 768px, 270px, 450px);
+    background-size: cover;
+  }
+
+  &__textbox {
+    @include fluid-type(padding-top padding-bottom, 375px, 1440px, 20px, 50px);
+    background-color: #fff;
+    z-index: 2;
+    text-align: center;
+
+    @include breakpoint($md) {
+      padding-left: 40px;
+      padding-right: 50px;
+      border: 1px solid #ddd;
+      text-align: left;
+      min-width: 490px;
+      flex: 1;
+    }
+  }
+
+  &__count {
+    color: $pizza;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    @include breakpoint($md) {
+      display: block;
+    }
+  }
+
+  &__title {
+    @include fluid-type(font-size, 375px, 1440px, 24px, 32px);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    @include breakpoint($md) {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__copy {
+    margin-bottom: 20px;
+    line-height: 1.7;
+    color: #999;
+  }
+
+  &__cta {
+    display: inline-block;
+    text-decoration: underline;
+    color: $neptune;
+    margin-bottom: 20px;
+    margin-right: 20px;
+  }
+
+  &__arrows {
+    display: none;
+    @include breakpoint($md) {
+      display: block;
+    }
+
+    & > button {
+      padding: 0;
+      color: $pizza;
+      font-size: 22px;
+
+      @include breakpoint($md) {
+        position: relative;
+        left: -4px;
+      }
+    }
+  }
+
+  .slick-arrow {
+    position: absolute;
+    @include fluid-type(top, 320px, 768px, 290px, 470px);
+  }
+
+  .slick-next {
+    right: -40px;
+  }
+
+  .slick-prev {
+    left: -40px;
+  }
+}

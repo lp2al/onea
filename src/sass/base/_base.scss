@@ -1,0 +1,106 @@
+// _base.scss
+* {
+  box-sizing: border-box;
+}
+
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+  margin-top: 0;
+  width: 100%;
+}
+
+body {
+  font-family: $font-family--primary;
+  font-size: $base__font-size;
+  height: 100%;
+  line-height: $base__line / $base__font-size;
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  color: $color-copy--mild;
+}
+
+header {
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family--secondary;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  color: #000;
+}
+
+h1 {
+  font-size: 26px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  font-size: 12px;
+}
+
+figure {
+  margin: 0;
+}
+
+hr {
+  border: none;
+}
+
+strong {
+  font-weight: $font-weight--bold;
+}
+
+p {
+  font-weight: $font-weight--light;
+  margin-top: 0;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+a {
+  color: $color-link;
+  cursor: pointer;
+}
+
+button {
+  background: transparent;
+  border: 0;
+}

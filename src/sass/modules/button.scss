@@ -1,0 +1,22 @@
+.button, .btn {
+	display: inline-block;
+	padding: 13px 30px;
+	color: $cathams-blue;
+	background-color: $mustard;
+	border-radius: 30px;
+	font-size: 12px;
+	font-weight: 600;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	transition: all .4s ease-in-out;
+
+  &:hover, &:focus {
+		color: white;
+		background-color: $casper-blue;
+  }
+
+  &--md {
+    padding: 20px 40px;
+  }
+}

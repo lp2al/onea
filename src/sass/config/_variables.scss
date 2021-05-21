@@ -1,0 +1,62 @@
+// Color usage
+$biege: #f3f1e5;
+$opium: #856969;
+$pizza: #c89010;
+$neptune: #73b5ab;
+
+$color-primary: #000;
+$color-secondary: #fff;
+$color-link: #000;
+$color-link--hover: $pizza;
+
+$color-border: #eaeaea;
+$color-border--mild: #dfdfdf;
+$color-border--dark: #dddddd;
+$color-background--soft: #ededed;
+$color-background--mild: #dfdfdf;
+
+$color-copy--dark: #333;
+$color-copy--mild: #666;
+$color-copy--soft: #777;
+$color-copy--xsoft: #999;
+$color-copy--xxsoft: #ccc;
+
+//Font Weights
+$font-weight--thin: 100;
+$font-weight--light: 300;
+$font-weight--medium: 400;
+$font-weight--semi-bold: 600;
+$font-weight--bold: 700;
+$font-weight--ultra-bold: 800;
+
+//Fonts
+$roboto: 'Roboto', sans-serif;
+$opensans: 'Open Sans', sans-serif;
+$montserrat: 'Montserrat', sans-serif;
+$publicsans: 'Public Sans', sans-serif;
+$poppins: 'Poppins', sans-serif;
+
+$font-family--primary: $publicsans;
+$font-family--secondary: $poppins;
+$font-family--tertiary: tahoma, arial, sans-serif;
+
+// Text
+$base__font-size: 16px;
+$base__line: 24px;
+
+//break points
+$sm: 480px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+$max-width: 1440px;
+$max-width-inner: 1140px;
+
+// Breakpoints
+$xs: 360px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1360px;
+$xxl: 1620px;

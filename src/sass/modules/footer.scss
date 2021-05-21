@@ -1,0 +1,47 @@
+.footer {
+  @include fluid-type(padding-top, 320px, 1600px, 30px, 100px);
+  background-color: $cathams-blue;
+  color: white;
+
+  & [class*="col-"] {
+    margin-bottom: 50px;
+
+    @include breakpoint($md) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__brand {
+    margin-top:30px;
+    @include breakpoint($md) {
+      margin-top: 0;
+    }
+  }
+
+  &__nav {
+    & a {
+      font-size: 16px;
+      font-weight: 300;
+      margin-bottom: 5px;
+      display: block;
+      color: rgba(white, 0.7);
+    }
+  }
+
+  &__heading {
+    width: 100%;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 22px;
+  }
+
+  &__bottom {
+    padding: 20px;
+    font-weight: 300;
+    color: rgba(white, 0.4);
+    background-color: $zodiac-navy;
+    text-align: center;
+    @include fluid-type(margin-top, 320px, 1600px, 30px, 100px);
+  }
+}
+

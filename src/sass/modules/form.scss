@@ -1,0 +1,24 @@
+.form {
+
+  &__field {
+    margin-bottom: 10px;
+  }
+
+  &__input, &__textarea {
+    width: 100%;
+    border: 2px solid #ddd;
+    border-radius: 3px;
+    padding: 12px 10px;
+    font-size:15px;
+    font-family: $publicsans;
+  } 
+
+  &__textarea {
+    min-height: 160px; 
+  }
+
+  [type="submit"] {
+    outline: 0;
+    cursor: pointer;
+  }
+}

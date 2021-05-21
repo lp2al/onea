@@ -1,0 +1,30 @@
+
+.social-follow {
+  align-items: center;
+  color: $color-copy--soft;
+  display: flex;
+  font-size: 11px;
+  text-transform: uppercase;
+
+  & > a {
+    background-color: #ffdb58;
+    align-items: center;
+    border-radius: 50%;
+    color: $zodiac-navy;
+    display: flex;
+    font-size: 12px;
+    width: 28px;
+    height: 28px;
+    margin-right:8px;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out 0s;
+
+    &:hover {
+      background-color: $schoolbus-yellow;
+      transform: scale(1.2);
+      backface-visibility: visible;
+      // color:black;
+    }
+  }
+}
+

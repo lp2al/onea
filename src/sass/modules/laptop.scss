@@ -1,0 +1,58 @@
+.laptop {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+  border: 3px solid #D6D6D6;
+  border-top-right-radius: 35px;
+  border-top-left-radius: 35px;
+  border-bottom:0;
+
+  @include breakpoint($md) {
+    height: 500px;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 25px;
+    background-color:rgba(black, 0.4);
+    z-index: 2;
+  }
+
+  &__screen {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 40px 30px;
+    background-color: white;
+
+    border: 50px solid $zodiac-navy;
+    @include fluid-type(border-top-width, 320px, 1600px, 50px, 60px);
+    @include fluid-type(border-left-width border-right-width, 320px, 1600px, 10px, 35px);
+
+    border-bottom:0;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    z-index:0;
+
+    // &:before {
+    //   content: "";
+    //   position: absolute;
+    //   width: 100%;
+    //   height: 100%;
+    //   left: 0;
+    //   top:0;
+    //   border: 2px solid #D6D6D6;
+    //   border-bottom: 0;
+    // }
+  }
+
+ 
+}

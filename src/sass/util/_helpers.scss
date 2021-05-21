@@ -1,0 +1,80 @@
+.text-r {
+  text-align: right !important;
+}
+.text-l {
+  text-align: left !important;
+}
+.text-c {
+  text-align: center !important;
+}
+
+.text-u {
+  text-decoration: underline !important;
+}
+
+.text-upper {
+  text-transform: uppercase !important;
+}
+.text-lower {
+  text-transform: lowercase !important;
+}
+
+//font size
+//font sizes 10 - 16 increment by 1
+$base-font-size: 9;
+@for $i from 1 through 7 {
+  .fs-#{$base-font-size + $i} {
+    font-size: $base-font-size + $i + px !important;
+  }
+}
+
+//font sizes 16 - 76 increment by 2
+$base-font-size: 16;
+$scale: 2;
+@for $i from 1 through 30 {
+  .fs-#{$base-font-size + $scale} {
+    font-size: $base-font-size + $scale + px !important;
+  }
+  $scale: $scale + 2;
+}
+
+.lh {
+  &-1 {
+    line-height: 1 !important;
+  }
+  &-2 {
+    line-height: 1.2 !important;
+  }
+  &-3 {
+    line-height: 1.3 !important;
+  }
+  &-4 {
+    line-height: 1.4 !important;
+  }
+  &-5 {
+    line-height: 1.5 !important;
+  }
+  &-6 {
+    line-height: 1.6 !important;
+  }
+  &-7 {
+    line-height: 1.7 !important;
+  }
+}
+
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

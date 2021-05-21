@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>One Aldwych Hotel</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+  
+<br>
+
+<section style="padding: 50px">
+
+
+  <div class="">
+    <button type="button" data-target="#bookings-popup" data-default="#tab-1"> Reservations </button>
+  </div>
+
+  <div id="bookings-popup" class="js-bookings-popup js-popup">
+    <div class="bookings-popup__inner">
+
+   
+      <section class="bookings-popup__head">
+        <div class="bookings-popup__menu js-menu-open" data-target="#menu-popup"><i class="hamburger"></i> MENU </div>
+        <div class="bookings-popup__logo"><img src="../images/one-aldwych_logo_teal.png"></div>
+        <div class="bookings-popup__close js-bookings-close">CLOSE</div>
+      </section>
+
+      <h3 class="bookings-popup__title underline"> Reservations </h3>
+
+      <div class="bookings-popup__body">
+        
+        <div class="bookings-popup__row">
+          <div class="bookings-popup__col">
+            <button type="button" data-target="#tab-1" class="onea-tab js-tab"> I'd like to book a room </button>
+          </div>
+          <div class="bookings-popup__col">
+            <button type="button" data-target="#tab-2" class="onea-tab js-tab"> I'd like to book a table </button>
+          </div>
+          <div class="bookings-popup__col">
+            <button type="button" data-target="#tab-2" class="onea-tab js-tab"> I'd like to book a treatment </button>
+          </div>
+        </div>
+
+        <div id="tab-1" class="bookings-popup__row onea-tab__item js-panel">
+          <div class="bookings-popup__col">
+            <h4 clas="onea-tab__item__title"> Check In </h4>
+            <div class="onea-datepicker js-datepicker js-checkin">
+              <div class="onea-datepicker__day js-day">22</div>
+              <div class="onea-datepicker__month">
+                <div class="js-month"> </div>
+                <button type="button" class="icon-chevron-thin-down"></button>
+              </div>
+            </div>
+          </div>
+          <div class="bookings-popup__col">
+            <h4 clas="onea-tab__item__title"> Check Out </h4>
+            <div class="onea-datepicker js-datepicker js-checkout">
+              <div class="onea-datepicker__day js-day">22</div>
+              <div class="onea-datepicker__month">
+                <div class="js-month"> </div>
+                <button type="button" class="icon-chevron-thin-down"></button>
+
+              </div>
+            </div>
+          </div>
+          <div class="bookings-popup__col">Guests</div>
+        </div>
+    
+        <div id="tab-2" class="bookings-popup__row onea-tab__item js-panel">
+          <div class="bookings-popup__col">Food & Drink</div>
+          <div class="bookings-popup__col">Date</div>
+          <div class="bookings-popup__col">Guests</div>
+          <div class="bookings-popup__col">Time</div>
+        </div>
+    
+        <div id="tab-3" class="bookings-popup__row onea-tab__item js-panel">
+          <div class="bookings-popup__col">Date </div>
+          <div class="bookings-popup__col">Treatments</div>
+          <div class="bookings-popup__col">Time</div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- <div class="main-menu"> 
+    <div class="main-menu__open js-menu-open" data-target="#menu-popup"><i class="hamburger"></i> MENU </div>
+  </div>
+
+  <div id="menu-popup" class="menu-popup js-menu-popup js-popup">
+    
+    <div class="menu-popup__inner"> 
+      <section class="menu-popup__head">
+        <div class="menu-popup__close js-menu-close">CLOSE</div>
+        <div class="menu-popup__logo"><img src="../images/one-aldwych_logo_teal.png"></div>
+        <div class=""><a href="">Reservations</a></div>
+      </section>
+
+      <section class="menu-popup__body js-menu-popup-body">  
+        <div class="menu-popup__body__col">
+          <ul id="menu-main-menu-popup" class="uc-list-menu">
+            <li id="menu-item-371" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-371"><a href="https://oneadev.wpengine.com/rooms-suites/">Suites &amp; Rooms</a>
+            <ul class="sub-menu">
+              <li id="menu-item-584" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-584"><a href="https://hello.com">Submenu Link</a></li>
+              <li id="menu-item-585" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-585"><a href="/">Submenu Link</a></li>
+              <li id="menu-item-586" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-586"><a href="/">Submenu Link</a></li>
+            </ul>
+            </li>
+            <li id="menu-item-386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-386">
+              <a href="https://oneadev.wpengine.com/food-drink/">Food &amp; Drink</a>
+              <ul class="sub-menu">
+                <li id="menu-item-584" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-584"><a href="https://hello.com">Submenu Link wdw</a></li>
+                <li id="menu-item-585" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-585"><a href="/">Submenu Linkwd </a></li>
+                <li id="menu-item-586" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-586"><a href="/">Submenu Link dwqdw </a></li>
+              </ul>
+            </li>
+            <li id="menu-item-387" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-387"><a href="https://oneadev.wpengine.com/health-club-spa/">Wellness</a></li>
+            <li id="menu-item-404" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-404"><a href="https://oneadev.wpengine.com/offers/">Offers</a></li>
+            <li id="menu-item-427" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-427"><a href="https://oneadev.wpengine.com/private-events/">Private Events</a></li>
+            <li id="menu-item-399" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-399"><a href="https://oneadev.wpengine.com/gifts/">Gifts</a></li>
+            <li id="menu-item-394" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394"><a href="https://oneadev.wpengine.com/experiences/culture-club/">Culture Club</a></li>
+            <li id="menu-item-385" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-385"><a href="https://oneadev.wpengine.com/the-world-of-one-aldwych/">The World of One Aldwych</a></li>
+          </ul>
+        </div>
+        <div class="menu-popup__body__col">
+          <div class="menu-popup__submenu js-submenu"> </div>
+        </div>
+      </section>
+
+      <section class="menu-popup__foot">
+          <a href="">Contact Us</a> - <a href="">Policies</a> - <a href="">Safety at One Aldwych</a>
+      </section>
+    </div>
+
+  </div>
+
+  <div class="slider-offer js-slider-offer js-slider">
+    <article class="slider-offer__item">
+
+      <div class="js-slide slider-offer__thumb" data-src="images/offers.png"> </div>
+      <div class="slider-offer__textbox">
+        <div class="slider-offer__count js-counter">&nbsp;</div>
+        <h2 class="slider-offer__title">THE LOCAL AREA</h2>
+        <p  class="slider-offer__copy">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+            Ab consequatur repellendus perspiciatis laudantium dicta quam ut laboriosam,
+             ducimus atque, pariatur tenetur! Eos facilis quidem ullam possimus voluptatem voluptates a quibusdam.
+        </p>
+        <a href="#" class="slider-offer__cta">FIND OUT MORE</a>
+        <div class="slider-offer__arrows">
+          <button type="button" class="js-prev">
+            <i class="icon-chevron-thin-left" aria-hidden="true"></i>
+            <span class="visually-hidden">Previous Slide</span>
+          </button>
+          <button type="button" class="js-next">
+            <i class="icon-chevron-thin-right" aria-hidden="true"></i>
+            <span class="visually-hidden">Next Slide</span>
+          </button>
+        </div>
+      </div>
+    </article>
+    <article class="slider-offer__item js-slide">
+      <div class="js-slide slider-offer__thumb" data-src="images/offers.png"> </div>
+      <div class="slider-offer__textbox">
+        <div class="slider-offer__count js-counter">&nbsp;</div>
+        <h2 class="slider-offer__title">THE LOCAL AREA</h2>
+        <p  class="slider-offer__copy">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+            Ab consequatur repellendus perspiciatis laudantium dicta quam ut laboriosam,
+             ducimus atque, pariatur tenetur! Eos facilis quidem ullam possimus voluptatem voluptates a quibusdam.
+        </p>
+        <a href="#" class="slider-offer__cta">BOOK NOW</a> <a href="#" class="slider-offer__cta">READ MORE</a>
+        <div class="slider-offer__arrows">
+          <button type="button" class="js-prev">
+            <i class="icon-chevron-thin-left" aria-hidden="true"></i>
+            <span class="visually-hidden">Previous Slide</span>
+          </button>
+          <button type="button" class="js-next">
+            <i class="icon-chevron-thin-right" aria-hidden="true"></i>
+            <span class="visually-hidden">Next Slide</span>
+          </button>
+        </div>
+      </div>
+    </article>
+  </div>
+
+
+  <br><br>
+
+
+  <div class="slider-suite js-slider-suite js-slider" style="max-width:1140px;">
+    <div class="slider-suite__item js-slide">
+      <article class="suite">
+        <img src="../images/suite.png" class="suite__thumb"/>
+        <div class="suite__body">
+          <h2 class="suite__title">SIGNATURE SUITES</h2>
+          <p class="suite__copy"> Discover unique artwork, extraordinary views and striking design in the Waterloo Bridge Suite. </p>
+          <a href="#" class="suite__cta"> VIEW SIGNATURE SUITE </a>
+        </div>
+      </article>
+      <article class="suite">
+        <img src="../images/suite.png" class="suite__thumb"/>
+        <div class="suite__body">
+          <h2 class="suite__title">SIGNATURE SUITES</h2>
+          <p class="suite__copy"> Discover unique artwork, extraordinary views and striking design in the Waterloo Bridge Suite. </p>
+          <a href="#" class="suite__cta"> VIEW SIGNATURE SUITE </a>
+        </div>
+      </article>
+    </div>
+    <div class="slider-suite__item js-slide">
+      <article class="suite">
+        <img src="../images/suite.png" class="suite__thumb"/>
+        <div class="suite__body">
+          <h2 class="suite__title">SIGNATURE SUITES</h2>
+          <p class="suite__copy"> Discover unique artwork, extraordinary views and striking design in the Waterloo Bridge Suite. </p>
+          <a href="#" class="suite__cta"> VIEW SIGNATURE SUITE </a>
+        </div>
+      </article>
+      <article class="suite">
+        <img src="../images/suite.png" class="suite__thumb"/>
+        <div class="suite__body">
+          <h2 class="suite__title">SIGNATURE SUITES</h2>
+          <p class="suite__copy"> Discover unique artwork, extraordinary views and striking design in the Waterloo Bridge Suite. </p>
+          <a href="#" class="suite__cta"> VIEW SIGNATURE SUITE </a>
+        </div>
+      </article>
+    </div>
+  </div>
+
+
+  <br><br>
+
+  <div class="slider-ig js-slider js-slider-ig">
+    <div class="slider-ig__item js-slide" data-src="images/1.jpg"></div>
+    <div class="slider-ig__item js-slide" data-src="images/2.jpg"></div>
+    <div class="slider-ig__item js-slide" data-src="images/3.jpg"></div>
+    <div class="slider-ig__item js-slide" data-src="images/4.jpg"></div>
+    <div class="slider-ig__item js-slide" data-src="images/2.jpg"></div>
+    <div class="slider-ig__item js-slide" data-src="images/3.jpg"></div>
+    <div class="slider-ig__item js-slide" data-src="images/4.jpg"></div>
+  </div>
+
+  <br><br>
+
+  <div class="slider-map js-slider-map js-slider">
+    <article class="slider-map__item js-slide" data-src="images/map.png">
+      <div class="slider-map__textbox">
+        <div class="slider-map__count js-counter">&nbsp;</div>
+        <h2 class="slider-map__title">THE LOCAL AREA</h2>
+        <p  class="slider-map__copy">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+            Ab consequatur repellendus perspiciatis laudantium dicta quam ut laboriosam,
+             ducimus atque, pariatur tenetur! Eos facilis quidem ullam possimus voluptatem voluptates a quibusdam.
+        </p>
+        <a href="#" class="slider-map__cta">FIND OUT MORE</a>
+        <div class="slider-map__arrows">
+          <button type="button" class="js-prev">
+            <i class="icon-chevron-thin-left" aria-hidden="true"></i>
+            <span class="visually-hidden">Previous Slide</span>
+          </button>
+          <button type="button" class="js-next">
+            <i class="icon-chevron-thin-right" aria-hidden="true"></i>
+            <span class="visually-hidden">Next Slide</span>
+          </button>
+        </div>
+      </div>
+    </article>
+    <article class="slider-map__item js-slide" data-src="images/map.png">
+      <div class="slider-map__textbox">
+        <div class="slider-map__count js-counter">&nbsp;</div>
+        <h2 class="slider-map__title">THE LOCAL AREA</h2>
+        <p  class="slider-map__copy">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+            Ab consequatur repellendus perspiciatis laudantium dicta quam ut laboriosam,
+             ducimus atque, pariatur tenetur! Eos facilis quidem ullam possimus voluptatem voluptates a quibusdam.
+        </p>
+        <a href="#" class="slider-map__cta">FIND OUT MORE</a>
+        <div class="slider-map__arrows">
+          <button type="button" class="js-prev">
+            <i class="icon-chevron-thin-left" aria-hidden="true"></i>
+            <span class="visually-hidden">Previous Slide</span>
+          </button>
+          <button type="button" class="js-next">
+            <i class="icon-chevron-thin-right" aria-hidden="true"></i>
+            <span class="visually-hidden">Next Slide</span>
+          </button>
+        </div>
+      </div>
+    </article>
+  </div>
+ -->
+
+</section>
+
+
+</body>
+</html>

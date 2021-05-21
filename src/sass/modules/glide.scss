@@ -1,0 +1,43 @@
+.glide {
+  
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  .glide__slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & > img {
+      margin-bottom: 30px;
+      max-width: 240px;
+    }
+
+    & > p {
+      margin-bottom: 30px;
+      max-width: 480px;
+    }
+  }
+
+  &__bullets {
+    bottom: -15px;
+  }
+
+/* purgecss start ignore */
+  &__bullet {
+    border: 1px solid $cathams-blue;
+    &--active {
+      background-color: $cathams-blue;
+    }
+    &:hover {
+      background-color: $mustard;
+    }
+    &:focus {
+      background-color: $mustard;
+    }
+  }
+}
+/* purgecss end ignore */

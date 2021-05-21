@@ -1,0 +1,63 @@
+.hero {
+  position: relative;
+  margin-top: var(--navbar-height);
+  @include fluid-type(margin-bottom, 320px, 1600px, 30px, 60px);
+  background: linear-gradient(160deg, #011533, #143659, #194876, #4091c2, #a5bccd);
+  background-size: 1000% 1000%;
+  animation: AnimationName 20s ease infinite;
+
+  @keyframes AnimationName {
+    0% { background-position: 0 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0 50%; }
+  }
+
+  overflow: hidden;
+  color: white;
+
+  &__copy {
+    @include fluid-type(padding-left padding-right, 320px, 1920px, 30px, 200px);
+    @include fluid-type(padding-top, 320px, 1920px, 40px, 130px);
+    margin-bottom: 40px;
+
+    @include breakpoint($lg) {
+      margin-bottom: -40px;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 900px;
+      // font-family: $montserrat;
+      font-weight: 600;
+      color: white;
+      line-height: 1.2;
+      @include fluid-type(font-size, 320px, 1600px, 30px, 70px);
+      @include fluid-type(margin-bottom, 320px, 1600px, 20px, 45px);
+      @include breakpoint($lg) {
+        line-height: 1.1;
+      }
+    }
+
+    p {
+      max-width: 600px;
+      opacity: 0.8;
+      @include fluid-type(font-size, 320px, 1600px, 16px, 18px);
+      @include fluid-type(margin-bottom, 320px, 1600px, 30px, 60px);
+    }
+  }
+
+  &__cta {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__curve {
+    position: relative;
+    left: -1px;
+    bottom: -1px;
+    width: 101%; // ensure this covers the entire block;
+    z-index: 1;
+    display: block;
+    // transform: scaleX(-1);
+  }
+}

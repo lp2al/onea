@@ -1,0 +1,7 @@
+.hamburger {
+  display: flex;
+  outline: 0;
+  @include breakpoint($md) {
+    display: none;
+  }
+}

@@ -1,0 +1,209 @@
+.main-menu {
+  color: black;
+  letter-spacing: 4px;
+  cursor: pointer;
+}
+
+.bookings-popup {
+  display: none;
+  font-family: 'LTCCaslon', serif;
+
+  &.-active {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+  }
+
+  & a {
+    font-family: 'LTCCaslon', serif;
+    text-decoration: none;
+    font-size: 20px;
+    &:hover {
+      color: $opium;
+    }
+
+    @include breakpoint($md) {
+      font-size: 24px;
+    }
+  }
+
+  &__inner {
+    width: 100%;
+    max-width: $max-width-inner;
+    margin: 0 auto;
+  }
+
+  &__head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 0 30px;
+    margin-bottom: 50px;
+    font-size: 14px;
+    font-family: 'Johnston ITC', Sans-serif;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+
+    @include breakpoint($md) {
+      justify-content: space-between;
+    }
+
+    & div:first-child,
+    & div:last-child {
+      @include breakpoint($md) {
+        min-width: 200px;
+      }
+    }
+
+    & div:last-child {
+      display: none;
+      text-align: right;
+      @include breakpoint($md) {
+        display: block;
+      }
+    }
+
+    & a {
+      font-size: 14px;
+      font-family: 'Johnston ITC', Sans-serif;
+      color: $neptune;
+    }
+  }
+
+  &__logo {
+    display: none;
+    @include breakpoint($md) {
+      display: block;
+    }
+  }
+
+  &__close {
+    color: $neptune;
+    cursor: pointer;
+    letter-spacing: 4px;
+    @include breakpoint($md) {
+      color: #000;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 26px;
+    padding-bottom: 15px;
+    // justify-content: center;
+  }
+
+  &__body {
+    //display: flex;
+  }
+
+  &__row {
+    display: flex;
+    &:first-child {
+      border-bottom: 1px solid #ddd;
+    }
+  }
+
+  &__col {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px 50px;
+    margin: 50px 0;
+
+    @include breakpoint($md) {
+      border-right: 1px solid #ddd;
+    }
+
+    &:first-child {
+      @include breakpoint($md) {
+        // border-right: 1px solid #ddd;
+      }
+    }
+
+    &:last-child {
+      @include breakpoint($md) {
+        border-right: 0;
+      }
+    }
+  }
+
+  &__foot {
+    display: flex;
+    justify-content: center;
+    & a {
+      font-size: 14px;
+      font-family: 'Johnston ITC', Sans-serif;
+      color: #999;
+      padding: 0 20px;
+    }
+  }
+}
+
+.underline {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    background-color: $pizza;
+    height: 2px;
+    width: 35px;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
+
+.onea-datepicker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__day {
+    font-size: 50px;
+    margin-right: 10px;
+  }
+
+  &__month {
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.onea-tab {
+  cursor: pointer;
+  font-size: 20px;
+  text-transform: uppercase;
+  max-width: 230px;
+  line-height: 1.4;
+  padding-bottom: 8px;
+  &.-active {
+    color: blue;
+  }
+
+  &:hover {
+    color: $opium;
+  }
+
+  &__item {
+    display: none;
+
+    &.-active {
+      display: flex;
+    }
+
+    &__title {
+    }
+  }
+}

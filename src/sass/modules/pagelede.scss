@@ -1,0 +1,49 @@
+.pagelede {
+  margin: 0 auto;
+  @include fluid-type(padding-top padding-bottom, 320px, 1600px, 40px, 90px);
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &:nth-child(even) {
+    background-color: $light-grey;
+  }
+
+  & .row {
+    margin: 0 auto;
+    max-width: 1600px;
+  }
+
+  & [class*="col-"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 30px;
+    @include breakpoint($md) {
+      max-width: 450px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__copy {
+    width: 100%;
+    max-width: 450px;
+    & h3,
+    h4 {
+      text-transform: capitalize;
+      font-size: 24px;
+      font-weight: 500;
+    }
+    & p {
+      @include fluid-type(font-size, 320px, 1600px, 16px, 18px);
+      font-weight: 300;
+      margin-bottom: 30px;
+    }
+  }
+}
